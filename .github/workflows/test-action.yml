@@ -1,0 +1,20 @@
+name: Test action
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'action.yml'
+
+  workflow_dispatch:
+
+jobs:
+  test_action:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger workflow
+        uses: martis99/trigger-workflow@main
+        with:
+          workflow: workflow
