@@ -4,10 +4,10 @@ inputs:
   workflow:
     required: true
 
-permissions: write-all
-
 runs:
   using: composite
+  permissions: write-all
+
   steps:
     - name: Trigger workflow
       uses: actions/github-script@v7
